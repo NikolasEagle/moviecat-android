@@ -1,4 +1,5 @@
 {
   "name": "moviecat_android",
-  "displayName": "moviecat_android"
+  "displayName": "moviecat_android",
+  "orientation": "default"
 }
