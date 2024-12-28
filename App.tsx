@@ -1,6 +1,6 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 
-import {View, BackHandler} from 'react-native';
+import {BackHandler, SafeAreaView} from 'react-native';
 
 import {WebView} from 'react-native-webview';
 
@@ -13,16 +13,23 @@ function App(): React.JSX.Element {
   }
 
   useEffect(() => {
+    webviewRef.current.requestFocus();
     BackHandler.addEventListener('hardwareBackPress', handleBackButtonsPress);
   }, []);
 
   return (
-    <View style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1}}>
       <WebView
+        userAgent="Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1"
+        domStorageEnabled={true}
         ref={webviewRef}
+        onNavigationStateChange={() => webviewRef.current.requestFocus()}
         allowsFullscreenVideo={true}
-        source={{uri: 'https://moviecat.online'}}></WebView>
-    </View>
+        javaScriptEnabled={true}
+        source={{
+          uri: 'http://192.168.0.32:3000',
+        }}></WebView>
+    </SafeAreaView>
   );
 }
 

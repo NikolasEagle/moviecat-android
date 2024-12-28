@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "react": "18.3.1",
-    "react-native": "0.76.5",
-    "react-native-webview": "^13.12.5"
+    "react-native": "^0.76.5",
+    "react-native-tvos": "^0.76.5-0",
+    "react-native-webview": "^13.12.5",
+    "react-tv-player": "^1.1.7"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
