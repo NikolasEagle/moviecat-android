@@ -13,21 +13,18 @@ function App(): React.JSX.Element {
   }
 
   useEffect(() => {
-    webviewRef.current.requestFocus();
     BackHandler.addEventListener('hardwareBackPress', handleBackButtonsPress);
   }, []);
-
   return (
     <SafeAreaView style={{flex: 1}}>
       <WebView
-        userAgent="Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1"
-        domStorageEnabled={true}
+        sharedCookiesEnabled={true}
+        thirdPartyCookiesEnabled={true}
         ref={webviewRef}
-        onNavigationStateChange={() => webviewRef.current.requestFocus()}
         allowsFullscreenVideo={true}
-        javaScriptEnabled={true}
+        setBuiltInZoomControls={false}
         source={{
-          uri: 'http://192.168.0.32:3000',
+          uri: 'https://moviecat.online',
         }}></WebView>
     </SafeAreaView>
   );

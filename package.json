@@ -14,6 +14,7 @@
     "react-native": "^0.76.5",
     "react-native-tvos": "^0.76.5-0",
     "react-native-webview": "^13.12.5",
+    "react-native-webview-landscape-fullscreen": "^1.0.7",
     "react-tv-player": "^1.1.7"
   },
   "devDependencies": {
