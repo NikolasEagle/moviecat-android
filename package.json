@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "react": "18.3.1",
-    "react-native": "^0.76.5",
+    "react-native": "^0.76.9",
     "react-native-tvos": "^0.76.5-0",
     "react-native-webview": "^13.12.5",
     "react-native-webview-landscape-fullscreen": "^1.0.7",

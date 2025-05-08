@@ -21,10 +21,9 @@ function App(): React.JSX.Element {
         sharedCookiesEnabled={true}
         thirdPartyCookiesEnabled={true}
         ref={webviewRef}
-        allowsFullscreenVideo={true}
         setBuiltInZoomControls={false}
         source={{
-          uri: 'https://moviecat.online',
+          uri: 'https://moviecat.eagle.dev.stack.fvds.ru',
         }}></WebView>
     </SafeAreaView>
   );
